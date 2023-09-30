@@ -1,0 +1,182 @@
+/* Variables */
+:root {
+    --bg-image: url(pic.jpg);
+    --bg-position: fixed center;
+    --bg-size: cover;
+    --box-sizing: border-box;
+    --box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
+    --card-margin-top: 10%;
+    --card-border-radius: 20px;
+    --card-header-bg: #116202;
+    --card-header-color: #ffffff;
+    --card-header-padding: 15px;
+    --login-form-bg: #628f5a;
+    --custom-field-font-size: 14px;
+    --custom-field-padding-top: 20px;
+    --custom-field-margin-top: 5px;
+    --custom-field-input-padding: 12px;
+    --custom-field-input-width: 300px;
+    --custom-field-input-font-size: 14px;
+    --custom-field-input-border-radius: 3px;
+    --custom-field-input-border: 1.5px solid rgb(0, 0, 0);
+    --custom-field-input-outline: none;
+    --custom-field-input-bg: #628f5a;
+    --custom-field-placeholder-left: 12px;
+    --custom-field-placeholder-top: calc(50% + 10px);
+    --custom-field-placeholder-transform: translateY(-50%);
+    --custom-field-placeholder-bg: #628f5a;
+    --custom-field-placeholder-color: #ffffff;
+    --custom-field-placeholder-transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    --btn-primary-bg: #1a9405;
+    --btn-primary-color: white;
+    --btn-primary-margin-right: 10px;
+    --btn-primary-hover-bg: rgb(156, 226, 203);
+    --btn-primary-hover-color: black;
+    --btn-primary-hover-transform: scale(1.15);
+    --btn-secondary-bg: #1a9405;
+    --btn-secondary-color: white;
+    --btn-secondary-hover-bg: rgb(156, 226, 203);
+    --btn-secondary-hover-color: black;
+    --btn-secondary-hover-transform: scale(1.15);
+    --btn-danger-margin-top: 80px;
+    --btn-danger-color: #ffffff;
+    --btn-danger-hover-transform: scale(1.15);
+    --btn-danger-hover-bg: rgb(220, 212, 212);
+    --btn-danger-hover-color: black;
+}
+
+/* Body Styles */
+body {
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: var(--bg-image), linear-gradient(rgba(17, 98, 2, 0.5), rgba(17, 98, 2, 0.5));
+    background-position: var(--bg-position);
+    background-size: var(--bg-size), cover;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: scroll, fixed;
+    box-shadow: inset 0 0 0 1000px rgba(17, 98, 2, 0.5);
+}
+
+/* Global Styles */
+*, *::before, *::after {
+    box-sizing: var(--box-sizing);
+}
+
+/* Registration Container Styles */
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Card Styles */
+.card {
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Card Header Styles */
+.card-header {
+    background-color: var(--card-header-bg);
+    color: var(--card-header-color);
+    padding-top: var(--card-header-padding);
+    border-radius: 50%;
+}
+
+/* Login Form Styles */
+#loginForm {
+    background-color: var(--login-form-bg);
+}
+
+/* Custom Field Styles */
+.custom-field {
+    position: relative;
+    font-size: var(--custom-field-font-size);
+    padding-top: var(--custom-field-padding-top);
+    margin-top: var(--custom-field-margin-top);
+}
+
+/* Custom Field Input Styles */
+.custom-field input {
+    padding: var(--custom-field-input-padding);
+    width: var(--custom-field-input-width);
+    font-size: var(--custom-field-input-font-size);
+    border-radius: var(--custom-field-input-border-radius);
+    border: var(--custom-field-input-border);
+    outline: var(--custom-field-input-outline);
+    background-color: var(--custom-field-input-bg);
+}
+
+/* Custom Field Placeholder Styles */
+.custom-field .placeholder {
+    position: absolute;
+    left: var(--custom-field-placeholder-left);
+    top: var(--custom-field-placeholder-top);
+    transform: var(--custom-field-placeholder-transform);
+    background-color: var(--custom-field-placeholder-bg);
+    color: var(--custom-field-placeholder-color);
+    transition: var(--custom-field-placeholder-transition);
+}
+
+/* Custom Field Input Placeholder Animation */
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder {
+    top: 21px;
+    font-size: 10px;
+    color: #222;
+    padding: 5px;
+    background: var(--custom-field-placeholder-bg);
+}
+
+/* Primary Button Styles */
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-color);
+    margin-right: var(--btn-primary-margin-right);
+}
+
+/* Primary Button Hover Styles */
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover-bg);
+    color: var(--btn-primary-hover-color);
+    transform: var(--btn-primary-hover-transform);
+}
+
+/* Secondary Button Styles */
+.btn-secondary {
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-color);
+}
+
+/* Secondary Button Hover Styles */
+.btn-secondary:hover {
+    background-color: var(--btn-secondary-hover-bg);
+    color: var(--btn-secondary-hover-color);
+    transform: var(--btn-secondary-hover-transform);
+}
+
+/* Danger Button Styles */
+.btn-danger {
+    margin-top: var(--btn-danger-margin-top);
+    color: var(--btn-danger-color);
+}
+
+/* Danger Button Hover Styles */
+.btn-danger:hover {
+    transform: var(--btn-danger-hover-transform);
+    background-color: var(--btn-danger-hover-bg);
+    color: var(--btn-danger-hover-color);
+}
+
+.welcome-h1,
+.welcome-h6{
+    color: #000000;
+}
